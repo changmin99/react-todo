@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { createContext } from "react";
 
-const DarkModeContext = createContext();
+export const DarkModeContext = createContext();
+
 export const useDarkMode = () => useContext(DarkModeContext);
 
 export function DarkModeProvider({ children }) {
