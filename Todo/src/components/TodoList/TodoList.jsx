@@ -9,6 +9,7 @@ export default function TodoList({ filter }) {
     { id: '124', text: '공부하기', status: 'active' },
   ]);
 
+  //새로운투두를 todos에 업데이트
   const handleAdd = (todo) => setTodos([...todos, todo]);
   const handleUpdate = (updated) =>
     setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
