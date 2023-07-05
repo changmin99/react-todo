@@ -10,14 +10,15 @@ export function DrakModeProvider({children}) {
         updateDarkMode(!darkmode)
         // 다크모드였던 반대로지정 (라이트모드)
     }
-    useEffect(()=>{
-    const isDark =
-    localStorage.theme === 'dark' || 
-    (!('theme' in localStorage) && 
-    window.matchMedia('(prefers-color-scheme: dark)').matches)
-    setDarkMode(isDark);
-    updateDarkMode(isDark);
-    }, [])
+    // useEffect(()=>{
+    // const isDark =
+    // localStorage.theme === 'dark' || 
+    // (!('theme' in localStorage) && 
+    // window.matchMedia('(prefers-color-scheme: dark)').matches)
+    // setDarkMode(isDark);
+    // updateDarkMode(isDark);
+    // }, [])
+
     return (
     <DarkModeContext.Provider value={{darkmode,toggleDarkMode}}>
         {children}
