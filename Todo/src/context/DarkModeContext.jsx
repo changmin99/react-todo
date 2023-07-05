@@ -5,6 +5,7 @@ import { createContext } from "react";
 
 const DarkModeContext = createContext();
 
+//내부적으로 상관없이 dakemode를 사용
 export const useDarkMode = () => useContext(DarkModeContext);
 
 export function DarkModeProvider({ children }) {
