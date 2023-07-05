@@ -7,9 +7,11 @@ export default function AddTodo({ onAdd }) {
   const handleChange = (e) => setText(e.target.value);
   const handleSubmit = (e) => {
     e.preventDefault();
+    //앞뒤 여백없애기
     if (text.trim().length === 0) {
       return;
     }
+    //고유한 id값 넣기
     onAdd({ id: uuidv4(), text, status: 'active' });
     setText('');
   };
