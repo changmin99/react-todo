@@ -12,6 +12,7 @@ export function DarkModeProvider({ children }) {
   const [darkMode, setDarkMode] = useState(false);
   const toggleDarkMode = () => {
     setDarkMode(/* (prev) => !prev */ !darkMode);
+    //기존에있던 다크모드가 반대로 라이트모드로 업데이트(변경)
     updateDarkMode(!darkMode);
   };
 
@@ -37,6 +38,7 @@ export function DarkModeProvider({ children }) {
   );
 }
 
+//다크모드인지아닌지 boolean으로
 function updateDarkMode(darkMode) {
   if (darkMode) {
     document.documentElement.classList.add("dark");
